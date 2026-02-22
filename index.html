@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Débora Silva Nails</title>
+
+<style>
+
+/* RESET */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: Arial, sans-serif;
+}
+
+/* MENU */
+header{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+background:rgba(0,0,0,0.8);
+z-index:1000;
+}
+
+header h1{
+color:gold;
+font-size:22px;
+}
+
+nav a{
+color:white;
+margin-left:20px;
+text-decoration:none;
+font-weight:bold;
+transition:0.3s;
+}
+
+nav a:hover{
+color:gold;
+}
+
+/* HERO */
+.hero{
+background:url('hero.jpg') center/cover no-repeat;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+position:relative;
+color:white;
+}
+
+.overlay{
+background:rgba(0,0,0,0.65);
+padding:40px;
+border-radius:20px;
+max-width:900px;
+}
+
+.hero h2{
+font-size:32px;
+line-height:1.4;
+}
+
+/* BOTÃO */
+.btn-destaque{
+display:inline-block;
+margin-top:30px;
+padding:18px 45px;
+font-size:20px;
+background:linear-gradient(45deg,gold,orange);
+color:black;
+font-weight:bold;
+border-radius:50px;
+text-decoration:none;
+transition:0.3s;
+box-shadow:0 0 20px gold;
+}
+
+.btn-destaque:hover{
+transform:scale(1.1);
+box-shadow:0 0 35px orange;
+}
+
+/* SOBRE */
+#sobre{
+padding:100px 60px;
+background:#111;
+color:white;
+display:flex;
+align-items:center;
+gap:50px;
+}
+
+#sobre img{
+width:220px;
+height:220px;
+border-radius:50%;
+object-fit:cover;
+border:4px solid gold;
+}
+
+#sobre h2{
+color:gold;
+margin-bottom:20px;
+}
+
+/* SERVIÇOS */
+#servicos{
+padding:100px 60px;
+background:#000;
+color:white;
+text-align:center;
+}
+
+#servicos h2{
+color:gold;
+margin-bottom:50px;
+}
+
+.servicos-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:30px;
+}
+
+.card{
+background:#111;
+padding:30px;
+border-radius:15px;
+border:2px solid gold;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 20px gold;
+}
+
+/* RODAPÉ */
+footer{
+background:#000;
+color:white;
+padding:30px;
+text-align:center;
+border-top:1px solid gold;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Débora Silva Nails</h1>
+<nav>
+<a href="#inicio">Início</a>
+<a href="#sobre">Sobre</a>
+<a href="#servicos">Serviços</a>
+<a href="agendamento.html">Agendar</a>
+</nav>
+</header>
+
+<!-- INÍCIO -->
+<section class="hero" id="inicio">
+<div class="overlay">
+<h2>
+BEM VINDA 💖 <br><br>
+Quer fazer ou retocar suas unhas e sobrancelhas?<br>
+Agende aqui já e não perca seu horário!
+</h2>
+
+<a href="agendamento.html" class="btn-destaque">
+AGENDAR AGORA
+</a>
+</div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre">
+
+<img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952" alt="Débora Silva">
+
+<div>
+<h2>Sobre Débora Silva</h2>
+
+<p>
+Débora Silva é Designer de Unhas especializada em alongamentos, esmaltação em gel,
+fibra de vidro e nail art personalizada.
+</p><br>
+
+<p>
+✨ Atendimento delicado e personalizado<br>
+✨ Experiência profissional<br>
+✨ Produtos de alta qualidade<br>
+✨ Ambiente confortável e higienizado<br>
+✨ Foco total na satisfação das clientes
+</p>
+
+</div>
+</section>
+
+<!-- SERVIÇOS -->
+<section id="servicos">
+
+<h2>Serviços Oferecidos</h2>
+
+<div class="servicos-grid">
+
+<div class="card">Alongamento em Gel</div>
+<div class="card">Fibra de Vidro</div>
+<div class="card">Esmaltação em Gel</div>
+<div class="card">Blindagem</div>
+<div class="card">Manicure Tradicional</div>
+<div class="card">Nail Art Personalizada</div>
+
+</div>
+
+</section>
+
+<footer>
+<p>© 2026 Débora Silva Nails - Todos os direitos reservados.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,583 @@
+/* ============================= */
+/* RESET */
+/* ============================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #000;
+  color: white;
+}
+
+/* ============================= */
+/* HEADER */
+/* ============================= */
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 1000;
+}
+
+header h1 {
+  color: gold;
+  font-size: 22px;
+}
+
+nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: gold;
+}
+
+/* ============================= */
+/* HERO */
+/* ============================= */
+
+.hero {
+  background: url("hero.jpg") no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.65);
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 900px;
+}
+
+.hero h2 {
+  font-size: 30px;
+  line-height: 1.4;
+}
+
+/* ============================= */
+/* BOTÃO PRINCIPAL */
+/* ============================= */
+
+.btn-destaque {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 18px 45px;
+  font-size: 20px;
+  background: linear-gradient(45deg, gold, orange);
+  color: black;
+  font-weight: bold;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: 0.3s;
+  box-shadow: 0 0 20px gold;
+}
+
+.btn-destaque:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 35px orange;
+}
+
+/* ============================= */
+/* FORMULÁRIO */
+/* ============================= */
+
+form {
+  max-width: 500px;
+  margin: 120px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.campo label {
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #555;
+}
+
+.campo input,
+.campo select {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.campo input:focus,
+.campo select:focus {
+  border-color: #c85a7a;
+  outline: none;
+}
+
+button {
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background: gold;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: orange;
+}
+
+/* ============================= */
+/* SERVIÇOS INTERATIVOS */
+/* ============================= */
+
+.servicos-interativos {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.servicos-interativos h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #c85a7a;
+}
+
+.cards-servicos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.card-servico {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card-servico:hover {
+  transform: translateY(-8px);
+}
+
+.card-servico h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #5c4033;
+}
+
+.card-servico span {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #c85a7a;
+}
+
+.card-servico.selecionado {
+  border: 2px solid #c85a7a;
+  background: #fff0f4;
+}
+
+/* ============================= */
+/* RESUMO */
+/* ============================= */
+
+.resumo {
+  margin-top: 50px;
+  font-size: 22px;
+}
+
+.resumo strong {
+  font-size: 28px;
+  color: #c85a7a;
+}
+
+/* ============================= */
+/* FOOTER */
+/* ============================= */
+
+.footer {
+  background: linear-gradient(135deg, #ff8fb1, #ff5e94);
+  padding: 60px 20px;
+  color: white;
+  text-align: center;
+}
+
+.footer-title {
+  font-size: 28px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.footer-copy {
+  margin-top: 25px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+/* ============================= */
+/* AJUSTE TOTAL PARA CELULAR */
+/* ============================= */
+
+@media screen and (max-width: 768px) {
+
+  /* HEADER */
+  header {
+    padding: 12px 15px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header h1 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav a {
+    margin: 5px 8px;
+    font-size: 14px;
+  }
+
+  /* HERO */
+  .hero {
+    height: auto;
+    min-height: 100vh;
+    padding: 100px 15px 40px 15px;
+  }
+
+  .overlay {
+    padding: 25px 15px;
+  }
+
+  .hero h2 {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  .btn-destaque {
+    font-size: 16px;
+    padding: 14px 30px;
+  }
+
+  /* FORMULÁRIO */
+  form {
+    margin: 100px 15px;
+    padding: 20px 15px;
+  }
+
+  .campo input,
+  .campo select {
+    font-size: 16px;
+  }
+
+  button {
+    font-size: 16px;
+  }
+
+  /* SERVIÇOS */
+  .servicos-interativos {
+    padding: 60px 15px;
+  }
+
+  .servicos-interativos h2 {
+    font-size: 24px;
+  }
+
+  .cards-servicos {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .card-servico {
+    padding: 20px;
+  }
+
+  .card-servico h3 {
+    font-size: 18px;
+  }
+
+  .card-servico span {
+    font-size: 16px;
+  }
+
+  /* RESUMO */
+  .resumo {
+    font-size: 18px;
+  }
+
+  .resumo strong {
+    font-size: 22px;
+  }
+
+  /* FOOTER */
+  .footer {
+    padding: 40px 15px;
+  }
+
+  .footer-title {
+    font-size: 20px;
+  }
+
+  .footer-copy {
+    font-size: 13px;
+  }
+
+}
+/* AJUSTE SEÇÃO SOBRE PARA CELULAR */
+@media screen and (max-width: 768px) {
+
+  #sobre {
+    flex-direction: column;
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  #sobre img {
+    width: 160px;
+    height: 160px;
+    margin-bottom: 20px;
+  }
+
+  #sobre div {
+    width: 100%;
+  }
+
+  #sobre h2 {
+    font-size: 22px;
+  }
+
+  #sobre p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+}
+/* ============================= */
+/* MENU PREMIUM INTERATIVO */
+/* ============================= */
+
+header {
+  box-shadow: 0 2px 15px rgba(0,0,0,0.5);
+}
+
+/* Container do menu */
+nav {
+  display: flex;
+  gap: 10px;
+}
+
+/* Botões do menu */
+nav a {
+  padding: 10px 18px;
+  border-radius: 25px;
+  background: transparent;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+/* Hover */
+nav a:hover {
+  background: gold;
+  color: black;
+  border: 1px solid gold;
+  transform: translateY(-2px);
+  box-shadow: 0 0 10px gold;
+}
+
+/* Clique */
+nav a:active {
+  transform: scale(0.95);
+}
+
+/* ============================= */
+/* MENU OTIMIZADO PARA CELULAR */
+/* ============================= */
+
+@media screen and (max-width: 768px) {
+
+  header {
+    padding: 10px;
+  }
+
+  nav {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  nav a {
+    flex: 1;
+    text-align: center;
+    padding: 12px 5px;
+    font-size: 14px;
+    background: #111;
+    border-radius: 12px;
+    border: 1px solid #333;
+  }
+
+  nav a:hover {
+    background: gold;
+    color: black;
+  }
+
+}
+/* ============================= */
+/* CORRIGIR HEADER SOBREPOSTO */
+/* ============================= */
+
+/* empurra o conteúdo para baixo */
+.hero {
+  padding-top: 120px;
+}
+
+/* ajuste específico para celular */
+@media screen and (max-width: 768px) {
+
+  .hero {
+    padding-top: 140px;
+  }
+
+}
+/* ============================= */
+/* CORREÇÃO DEFINITIVA HEADER FIXO */
+/* ============================= */
+
+/* cria espaço real abaixo do header */
+body {
+  padding-top: 90px;
+}
+
+/* ajuste para celular */
+@media screen and (max-width: 768px) {
+
+  body {
+    padding-top: 110px;
+  }
+
+}
+/* ============================= */
+/* CORREÇÃO DEFINITIVA HEADER FIXO */
+/* ============================= */
+
+/* cria espaço real abaixo do header */
+body {
+  padding-top: 90px;
+}
+
+/* ajuste para celular */
+@media screen and (max-width: 768px) {
+
+  body {
+    padding-top: 110px;
+  }
+
+}
+/* ============================= */
+/* HEADER TOTALMENTE FIXO */
+/* ============================= */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: rgba(0,0,0,0.95);
+  z-index: 9999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+/* empurra TODO o conteúdo para baixo do header */
+body {
+  margin-top: 80px;
+}
+
+/* celular */
+@media screen and (max-width: 768px) {
+
+  header {
+    height: 100px;
+    padding: 10px;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  body {
+    margin-top: 100px;
+  }
+
+}
+/* ============================= */
+/* HEADER TOTALMENTE FIXO */
+/* ============================= */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: rgba(0,0,0,0.95);
+  z-index: 9999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+/* empurra TODO o conteúdo para baixo do header */
+body {
+  margin-top: 80px;
+}
+
+/* celular */
+@media screen and (max-width: 768px) {
+
+  header {
+    height: 100px;
+    padding: 10px;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  body {
+    margin-top: 100px;
+  }
+
+}
